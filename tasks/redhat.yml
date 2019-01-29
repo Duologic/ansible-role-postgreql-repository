@@ -5,7 +5,8 @@
 - name: Install Postgresql YUM repo
   package: name={{ yum_repo_url }} state=present
 
-- set_fact:
+- name: Set __postgresql_* fact
+  set_fact:
     postgresql_enablerepo: 'pgdg{{ postgres_repo_version|regex_replace("\.","") }}'
     __postgresql_version: '{{ postgres_repo_version }}'
     __postgresql_bin_path: '/usr/pgsql-{{ postgres_repo_version }}/bin'
