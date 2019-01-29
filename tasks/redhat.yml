@@ -13,7 +13,9 @@
   set_fact:
     postgresql_enablerepo: 'pgdg{{ postgres_repo_version|regex_replace("\.","") }}'
     __postgresql_version: '{{ postgres_repo_version }}'
+    __postgresql_data_dir: '/var/lib/pgsql/{{ postgres_repo_version }}/data'
     __postgresql_bin_path: '/usr/pgsql-{{ postgres_repo_version }}/bin'
+    __postgresql_config_path: '/var/lib/pgsql/{{ postgres_repo_version }}/data'
     __postgresql_daemon: 'postgresql-{{ postgres_repo_version }}'
     __postgresql_packages:
         - 'postgresql{{ postgres_repo_version|regex_replace("\.","") }}'
