@@ -1,7 +1,7 @@
 Duologic.postgresql_repository
 ==============================
 
-This role install the official Postgresql repositories. Tested on CentOS 7 and Ubuntu 18.04/Bionic. This role is sets facts for use in [geerlingguy.postgresql](https://github.com/geerlingguy/ansible-role-postgresql).
+This role install the official Postgresql repositories. Tested on CentOS 7 and Ubuntu 18.04/Bionic. This role sets facts for use in [geerlingguy.postgresql](https://github.com/geerlingguy/ansible-role-postgresql).
 
 Role Variables
 --------------
