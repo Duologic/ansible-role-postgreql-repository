@@ -1,0 +1,26 @@
+---
+- name: Install Postgresql APT repo key
+  apt_key:
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    state: present
+
+- name: Install Postgresql APT repo
+  apt_repository:
+    repo: deb http://apt.postgresql.org/pub/repos/apt/ {{ansible_distribution_release}}-pgdg main
+    state: present
+
+- set_fact:
+    __postgresql_version: '{{ postgres_repo_version }}'
+
+- set_fact:
+    __postgresql_packages:
+        - 'postgresql-{{ postgres_repo_version|regex_replace("\.","") }}'
+        - 'libpq-dev'
+  when: not postgres_repo_version is match('^9.*')
+
+- set_fact:
+    __postgresql_packages:
+        - 'postgresql-{{ postgres_repo_version|regex_replace("\.","") }}'
+        - 'postgresql-contrib-{{ postgres_repo_version|regex_replace("\.","") }}'
+        - 'libpq-dev'
+  when: postgres_repo_version is match('^9.*')
