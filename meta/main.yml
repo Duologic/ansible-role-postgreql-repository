@@ -4,7 +4,7 @@ dependencies: []
 galaxy_info:
   role_name: postgresql-repository
   author: Duologic
-  description:  Install Postgresql repositories.
+  description: Install Postgresql repositories.
   license: "MIT"
   min_ansible_version: 2.7
   platforms:

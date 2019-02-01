@@ -1,3 +1,4 @@
+---
 platforms:
   ami201503__6: {d: false, f: ami201503-, i: yum, p: redhat/rhel-6, s: 5994, t: Amazon Linux AMI201503 6}
   centos_5: {d: false, f: centos, i: yum, p: redhat/rhel-5, s: 1995, t: CentOS 5}
