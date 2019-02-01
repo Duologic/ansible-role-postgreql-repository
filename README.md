@@ -1,6 +1,8 @@
 Duologic.postgresql_repository
 ==============================
 
+[![Build Status](https://travis-ci.org/Duologic/ansible-role-postgresql-repository.svg?branch=master)](https://travis-ci.org/Duologic/ansible-role-postgresql-repository)
+
 This role install the official Postgresql repositories. Tested on CentOS 7 and Ubuntu 18.04/Bionic. This role sets facts for use in [geerlingguy.postgresql](https://github.com/geerlingguy/ansible-role-postgresql).
 
 Role Variables
