@@ -4,7 +4,7 @@ services: docker
 
 env:
   global:
-    - ROLE_NAME: postgresql_repository
+    - ROLE_NAME: postgresql-repository
   matrix:
     - MOLECULE_DISTRO: centos6
     - MOLECULE_DISTRO: centos7
@@ -20,7 +20,7 @@ install:
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
   - cd ../
-  - mv ansible-role-postgresql-repository Duologic.$ROLE_NAME
+  - mv ansible-role-$ROLE_NAME Duologic.$ROLE_NAME
   - cd Duologic.$ROLE_NAME
 
 script:

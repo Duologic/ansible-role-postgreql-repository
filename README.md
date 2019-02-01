@@ -1,4 +1,4 @@
-Duologic.postgresql_repository
+Duologic.postgresql-repository
 ==============================
 
 [![Build Status](https://travis-ci.org/Duologic/ansible-role-postgresql-repository.svg?branch=master)](https://travis-ci.org/Duologic/ansible-role-postgresql-repository)
@@ -21,7 +21,7 @@ Example Playbook
     - hosts: servers
       become: yes
       roles:
-         - { role: Duologic.postgresql_repository, postgres_repo_version: '11' }
+         - { role: Duologic.postgresql-repository, postgres_repo_version: '11' }
 ```
 
 License

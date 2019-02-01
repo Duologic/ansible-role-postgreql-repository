@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  role_name: postgresql_repository
+  role_name: postgresql-repository
   author: Duologic
   description:  Install Postgresql repositories.
   license: "MIT"
