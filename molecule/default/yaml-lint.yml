@@ -1,4 +1,6 @@
 ---
+ignore: |
+  vars/main.yml
 extends: default
 rules:
   line-length:
