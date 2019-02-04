@@ -1,4 +1,7 @@
 ---
+- name: Install gnupg
+  apt: pkg=gnupg state=present
+
 - name: Install Postgresql APT repo key
   apt_key:
     url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
