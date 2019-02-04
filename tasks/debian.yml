@@ -1,6 +1,10 @@
 ---
 - name: Install gnupg
   apt: pkg=gnupg state=present
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
 
 - name: Install Postgresql APT repo key
   apt_key:
